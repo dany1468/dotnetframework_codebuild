@@ -9,7 +9,13 @@ Task("def").Does(() => {
     Information("Success");
 });
 
-Task("build").Does(() => {
+Task("restore").Does(() => {
+    Information("Restoring...");
+
+    NuGetRestore("./CodeBuildTest.sln");
+});
+
+Task("build").IsDependentOn("restore").Does(() => {
     Information("Build project...");
 
 	MSBuild(
