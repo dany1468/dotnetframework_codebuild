@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo running test ... | tee -a log.txt
-      - docker-compose exec mono sh -c "mono tools/Cake/Cake.exe build.cake -Target=test" | tee -a log.txt
+      - docker-compose exec mono sh -c "mono tools/Cake/Cake.exe build.cake -Target=test"
   post_build:
     commands:
       - docker-compose down
