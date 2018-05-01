@@ -6,3 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile-mono
     tty: true
+    depends_on:
+      - pg
+  pg:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
