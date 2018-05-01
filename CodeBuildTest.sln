@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBuildTest", "CodeBuildTest\CodeBuildTest.csproj", "{330F3841-85D2-4FCE-83A4-4C9BA196ABD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cake", "cake", "{0523473A-1421-4613-926D-7B431361B4B9}"
+ProjectSection(SolutionItems) = preProject
+	build.cake = build.cake
+	build.ps1 = build.ps1
+	docker-compose.yml = docker-compose.yml
+	Dockerfile-mono = Dockerfile-mono
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{330F3841-85D2-4FCE-83A4-4C9BA196ABD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330F3841-85D2-4FCE-83A4-4C9BA196ABD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330F3841-85D2-4FCE-83A4-4C9BA196ABD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330F3841-85D2-4FCE-83A4-4C9BA196ABD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
