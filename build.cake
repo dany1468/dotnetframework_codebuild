@@ -3,7 +3,11 @@
 #tool "nuget:?package=OpenCover"
 #tool "nuget:?package=NUnit.ConsoleRunner"
 
-var target = Argument("target", "coverage");
+var target = Argument("target", "def");
+
+Task("def").Does(() => {
+    Information("Success");
+});
 
 Task("build").Does(() => {
     Information("Build project...");
@@ -17,8 +21,7 @@ Task("build").Does(() => {
     );
 });
 
-//Task("test").IsDependentOn("build").Does(() => {
-Task("test").Does(() => {
+Task("test").IsDependentOn("build").Does(() => {
   Information("Process Test...");
 
   NUnit3(@"./CodeBuildTest/bin/Debug/CodeBuildTest.dll",
