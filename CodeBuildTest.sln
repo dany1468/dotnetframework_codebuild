@@ -8,6 +8,7 @@ ProjectSection(SolutionItems) = preProject
 	build.ps1 = build.ps1
 	docker-compose.yml = docker-compose.yml
 	Dockerfile-mono = Dockerfile-mono
+	buildspec.yml = buildspec.yml
 EndProjectSection
 EndProject
 Global

@@ -1,13 +1,9 @@
 FROM mono:latest
 
-ENV APP_HOME /myapp 
+ENV APP_HOME /myapp
 
-RUN mkdir -p /root/.nuget/packages
+RUN mkdir -p $APP_HOME
 
-COPY ./NugetPackages /root/.nuget/packages/
-
-RUN mkdir -p $APP_HOME 
-
-WORKDIR $APP_HOME 
+WORKDIR $APP_HOME
 
 ADD . $APP_HOME

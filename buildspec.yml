@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo running doekcer-compose ... | tee -a log.txt
+      - docker-compose up -d
+  build:
+    commands:
+      - echo running test ... | tee -a log.txt
+      - docker-compose exec mono sh -c "mono tools/Cake/Cake.exe build.cake -Target=test" | tee -a log.txt
+  post_build:
+    commands:
+      - docker-compose down
